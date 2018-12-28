@@ -12,12 +12,12 @@ MQ7 mq7(A0,5.0);
 boolean wifiConnected = false;
 WiFiClient wifiClient;
 //##################################################
-char auth[] = "892c42d272bf408d8965619d0f2f2202";
+char auth[] = "auth_code";
 BlynkTimer timer;
 //##################################################
 // Change this!!
-const char* ssid = "suddenlink.net-AD42";
-const char* password = "G7MBSY89C601814";
+const char* ssid = "ssid name";
+const char* password = "ssid passwod";
 //##################################################
 //##################################################
 void myTimerEvent()
