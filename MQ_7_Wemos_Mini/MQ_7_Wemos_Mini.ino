@@ -12,12 +12,12 @@ MQ7 mq7(A0,5.0);
 boolean wifiConnected = false;
 WiFiClient wifiClient;
 //##################################################
-char auth[] = "892c42d272bf408d8965619d0f2f2202";
+char auth[] = "enter ahuth code";
 BlynkTimer timer;
 //##################################################
 // Change this!!
-const char* ssid = "suddenlink.net-AD42";
-const char* password = "G7MBSY89C601814";
+const char* ssid = "enter ssid";
+const char* password = "enter ssid password";
 //##################################################
 //##################################################
 void myTimerEvent()
@@ -41,9 +41,10 @@ void loop() {
     if(WiFi.status() != WL_CONNECTED){
       connectWifi();
     }else{
-      Serial.println(mq7.getPPM());
-      publishLightState(mq7.getPPM());
-      delay(1000);
+      float co= mq7.getPPM();
+      Serial.println(co);
+      publishLightState(co);
+      delay(3000);
     }
     hassioMqttloop();
     Blynk.run();
