@@ -12,12 +12,12 @@ MQ7 mq7(A0,5.0);
 boolean wifiConnected = false;
 WiFiClient wifiClient;
 //##################################################
-char auth[] = "enter ahuth code";
+char auth[] = "auth_code";
 BlynkTimer timer;
 //##################################################
 // Change this!!
-const char* ssid = "enter ssid";
-const char* password = "enter ssid password";
+const char* ssid = "ssid name";
+const char* password = "ssid passwod";
 //##################################################
 //##################################################
 void myTimerEvent()
@@ -55,7 +55,7 @@ void loop() {
 boolean connectWifi(){
   boolean state = true;
   int i = 0;
-  
+
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   Serial.println("");
